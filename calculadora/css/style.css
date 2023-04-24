@@ -1,0 +1,80 @@
+html {
+    font-size: 175%;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+  
+  body {
+    align-items: center;
+    background-color: gray;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .calculadora {
+    border-radius: 12px;
+    box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 400px;
+    overflow: hidden;
+  }
+  
+  .calculadoraTela{
+    background-color: #222222;
+    color: #fff;
+    font-size: 1.714285714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+  }
+  
+  .calculadoraTeclas {
+    background-color: #999;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(6, 70px);
+  }
+  
+  .calculadoraTeclas > * {
+    background-color: #fff;
+    padding: 0.5em 1.25em;
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  .calculadoraTeclas > *:active::before,
+  .calculadoraTeclas > .is-depressed::before {
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+    content: "";
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .teclaFuncional{
+    background-color: rgb(245, 1, 1);
+  }
+  
+  .teclaZero{
+    grid-column: 1 / span 3;
+    grid-row: 6 ;
+  }
+
+  .teclaOperacao {
+    background-color: #340096;
+  }
+  
+  .teclaIgual {
+    background-color: rgb(255, 0, 128);
+    grid-column: -2;
+    grid-row: 2 / span 5;
+  }
